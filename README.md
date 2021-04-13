@@ -1,0 +1,1 @@
+ This project is designed to calculate the tip amount by entering the bill amount and selecting the tip percentages. Here, the user can calculate the tip amount that they can get from a single bill pay. 
