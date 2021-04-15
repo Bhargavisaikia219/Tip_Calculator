@@ -19,10 +19,18 @@ class TipCal():
         bill_amount_entry.grid(row = 0, column = 3, padx = 7)
 
         self.tippercent = IntVar()
-        five_percent = Radiobutton(window, text ="5%", variable = self.tippercent, value = 5 )
-        five_percent.grid(row = 2, column = 0)
-        ten_percent = Radiobutton(window, text="10%", variable=self.tippercent, value=10)
-        ten_percent.grid(row=3, column=0)
+        five_percent = Radiobutton(window, text = "5%", variable = self.tippercent, value = 5 )
+        five_percent.grid(row = 1, column = 0)
+        ten_percent = Radiobutton(window, text = "10%", variable = self.tippercent, value = 10)
+        ten_percent.grid(row = 2, column = 0)
+        fifteen_percent = Radiobutton(window, text = "15%", variable = self.tippercent, value = 15)
+        fifteen_percent.grid(row = 3, column = 0)
+        tweny_percent = Radiobutton(window, text ="20%", variable = self.tippercent, value = 20)
+        tweny_percent.grid(row = 4, column = 0)
+        twentyfive_percent = Radiobutton(window, text = "25%", variable = self.tippercent, value = 25)
+        twentyfive_percent.grid(row = 5, column = 0)
+        thirty_percent = Radiobutton(window, text = "30%", variable = self.tippercent, value = 30)
+        thirty_percent.grid(row = 6, column = 0)
 
         window.mainloop()
 
