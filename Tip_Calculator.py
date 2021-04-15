@@ -11,7 +11,7 @@ class TipCal():
         tip_percentage = Label(window, text = "Tip Percentages", bg = "yellow", fg = "black", width = 15)
         tip_percentage.grid(row = 0, column = 0, padx = 14, pady = 14)
 
-        bill_amount = Label(window, text="Bill_amount", bg="cyan2", fg="black", width=15)
+        bill_amount = Label(window, text="Bill Amount", bg="cyan2", fg="black", width=15)
         bill_amount.grid(row = 0, column =1 , padx = 10)
 
         self.mealcost = StringVar()
@@ -31,6 +31,13 @@ class TipCal():
         twentyfive_percent.grid(row = 5, column = 0)
         thirty_percent = Radiobutton(window, text = "30%", variable = self.tippercent, value = 30)
         thirty_percent.grid(row = 6, column = 0)
+
+        tip_amount = Label(window, text="Tip Amount", bg="wheat1", fg="black", width=15)
+        tip_amount.grid(row = 3, column =1, padx = 10 )
+
+        tip_billamount = Label(window, text="Bill Total", bg="IndianRed1", fg="black", width=15)
+        tip_billamount.grid(row = 6, column =1, padx = 7 )
+
 
         window.mainloop()
 
