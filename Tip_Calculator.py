@@ -51,13 +51,27 @@ class TipCal():
         bill_total_entry = Entry(window, textvariable = self.billtotal, width = 14)
         bill_total_entry.grid(row = 5, column = 2, padx = 7)
 
-        calculate_button = Button(window, text = "Calculate", bg = "grey36", fg = "black", width = 10, command = "")
+        calculate_button = Button(window, text = "Calculate", bg = "grey36", fg = "black", width = 10, command = self.calculate)
         calculate_button.grid(row = 7, column = 1, padx = 15, pady = 10)
 
-        clear_button = Button(window, text = "Clear", bg = "thistle", fg = "black", width = 10, command = "")
+        clear_button = Button(window, text = "Clear", bg = "thistle", fg = "black", width = 10, command = self.clear)
         clear_button.grid(row = 7, column = 2, padx = 15, pady = 10)
 
-
         window.mainloop()
+
+    def calculate(self):
+        meal_cost = float(self.mealcost.get())
+        percentage = self.tippercent.get() / 100
+        tip_amount_entry = meal_cost * percentage
+        self.tipamount.set(tip_amount_entry)
+
+        final_bill = meal_cost + tip_amount_entry
+        self.billtotal.set(final_bill)
+
+    def clear(self):
+         self.billtotal.set("")
+         self.mealcost.set("")
+         self.tipamount.set("")
+
 
 TipCal()
